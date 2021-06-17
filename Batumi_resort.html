@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -20,7 +21,7 @@
 
             <nav class="menu">
                 <ul>
-                    <li><a href="#about_city">О городе</a></li>
+                    <li><a href="#wrapper-about_city">О городе</a></li>
                     <li><a href="#wrapper-reasons_to_visit">Причины посетить</a></li>
                     <li><a href="#what_to_try">Что попробывать</a></li>
                     <li><a href="#map">Карта</a></li>
@@ -30,19 +31,21 @@
 
         <div class="content">
             <main>
-                <section class="first_page">
+                <section class="preview">
                     <div class="title-wrapper">
                         <div class="decor-title-wrapper_one"></div>
-                        <h2 class="subtitle">Cтолица грузинской республики Аджария</h2>
-                        <h1 class="title">Черноморский курорт</h1>
-                        <button class="read_more">Читать больше</button>
+                        <div class="text_block">
+                            <h2 class="subtitle">Cтолица грузинской республики Аджария</h2>
+                            <h1 class="title">Черноморский курорт</h1>
+                            <button class="read_more">Читать больше</button>
+                        </div>
                         <div class="decor-title-wrapper_two"></div>
                     </div>
                 </section>
 
-                <section id="about_city">
+                <section id="wrapper-about_city">
                     <div class="about_city">
-                        <img class="img-night_Batumi" src="./Img/photo_about_city/night_Batumi.png" alt="night_Batumi">
+                        <img class="img-about_city" src="./Img/photo_about_city/night_Batumi.png" alt="night_Batumi">
                         <div class="text-about_city">
                             <h4>Батуми - курортная столица Грузии с яркой ночной жизнью. </h4>
                             <p>Здесь клубам предпочитают живую музыку, домашним посиделкам
@@ -53,7 +56,7 @@
                         </div>
                     </div>
 
-                    <div class="about_city">
+                    <div class="about_city center_block">
                         <div class="text-about_city ">
                             <h4>За последнее десятилетие Батуми значительно поменял свой облик</h4>
                             <p class="text-architecture">
@@ -61,14 +64,14 @@
                                 смесь архитектуры, начиная от очаровательных классических зданий 19 века и заканчивая
                                 ультрасовременными небоскрёбами.</p>
                         </div>
-                        <img class="Europe_square" src="./Img/photo_about_city/Europe_square.jpg" alt="Europe_square">
+                        <img class="img-about_city" src="./Img/photo_about_city/Europe_square.jpg" alt="Europe_square">
                     </div>
 
 
                     <div class="about_city">
-                        <img class="boulevard_Batumi" src="./Img/photo_about_city/boulevard_Batumi.jpg"
+                        <img class="img-about_city" src="./Img/photo_about_city/boulevard_Batumi.jpg"
                             alt="boulevard_Batumi">
-                        <div class="text-about_city text-boulevard_Batumi">
+                        <div class="text-about_city">
                             <h4>Батумский бульвар</h4>
                             <p>Батумский бульвар является одной из
                                 самых важных достопримечательностей Батуми. <br>
@@ -84,11 +87,11 @@
                 </section>
 
                 <section id="wrapper-reasons_to_visit">
-                    <h2>Причины посетить ?</h2>
+                    <h2 class="title-reasons_to_visit">Причины посетить?</h2>
                     <div class="decor_line-reasons_to_visit"></div>
 
                     <div class="reasons_to_visit">
-                        <div class="reasons_block reasons_block_top">
+                        <div class="reasons_block reasons_block_top" id="first_reason">
                             <div class="reason_text_title">
                                 <h3>1</h3>
                                 <h4> Безвизовый режим</h4>
@@ -97,7 +100,7 @@
                                 в незапланированном отпуске.
                             </p>
                         </div>
-                        <div class="reasons_block reasons_block_top">
+                        <div class="reasons_block reasons_block_top" id="second_reason">
                             <div class="reason_text_title">
                                 <h3>2</h3>
                                 <h4>Грузинское гостеприимство</h4>
@@ -106,7 +109,7 @@
                                 улыбкой и добродушием, уделяют туристам большое внимание.
                             </p>
                         </div>
-                        <div class="reasons_block reasons_block_top">
+                        <div class="reasons_block reasons_block_top" id="third_reason">
                             <div class="reason_text_title">
                                 <h3>3</h3>
                                 <h4> Всё для приятного отдыха</h4>
@@ -116,7 +119,7 @@
                                 планировка улиц делают Батуми милым, ярким и безупречным.
                             </p>
                         </div>
-                        <div class="reasons_block">
+                        <div class="reasons_block" id="fourth_reason">
                             <div class="reason_text_title">
                                 <h3>4</h3>
                                 <h4>Природные богатства
@@ -126,7 +129,7 @@
                                 и хвойных лесов придают особую привлекательность Аджарии.
                             </p>
                         </div>
-                        <div class="reasons_block">
+                        <div class="reasons_block" id="fifth_reason">
                             <div class="reason_text_title">
                                 <h3>5</h3>
                                 <h4>Адекватные цены</h4>
@@ -135,7 +138,7 @@
                                 остаются по приемлемым ценам.
                             </p>
                         </div>
-                        <div class="reasons_block">
+                        <div class="reasons_block" id="sixth_reason">
                             <div class="reason_text_title">
                                 <h3>6</h3>
                                 <h4>В Батуми есть на что посмотреть
@@ -151,7 +154,7 @@
 
                 <section id="what_to_try">
                     <div class="title-section-what_to_try">
-                        <h3>Что попробовать ?</h3>
+                        <h3>Что попробовать?</h3>
                         <div class="decor_line-what_to_try"></div>
                         <h4>Это настоящее богатство Грузии, с которым нужно обязательно познакомиться, путешевствуя по
                             Батуми.</h4>
@@ -217,10 +220,10 @@
 
 
 
-                <div id="map">
+                <div id="map_block">
                     <h4>Карта с метками лучших мест и достопримечательностей Батуми</h4>
                     <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1Bqak0TaDeMpgsgiJGExhCoY6guolT9LL"
-                        width="800" height="450"></iframe>
+                        class="map"></iframe>
                 </div>
         </div>
         <div class="scroll_up">
@@ -239,14 +242,14 @@
         <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis aspernatur quibusdam
             corporis
             repudiandae placeat ad saepe.</h4>
-
-        <div class="decor_line"></div>
-
+        <div class="decor_line-footer"></div>
         <div class="contacts">
-            <a href="#" class="social_media"><img src="./Icons/svg/instagram.svg" alt="instagram"></a>
-            <a href="#" class="social_media"><img src="./Icons/svg/twitter.svg" alt="twitter"></a>
-            <a href="#" class="social_media"><img src="./Icons/svg/youtube.svg" alt="youtube"></a>
-            <a href="#" class="social_media"><img src="./Icons/svg/facebook.svg" alt="facebook"></a>
+            <a href="https://www.instagram.com/drkl2104/?hl=ru" target="_blank" class="social_media"><img
+                    src="./Icons/svg/instagram.svg" alt="instagram"></a>
+            <a href="#" target="_blank" class="social_media"><img src="./Icons/svg/linkedin.svg" alt="linkedin"></a>
+            <a href="#" target="_blank" class="social_media"><img src="./Icons/svg/youtube.svg" alt="youtube"></a>
+            <a href="#" target="_blank" class="social_media"><img src="./Icons/svg/github.svg" alt="github"></a>
+            <a href="#" target="_blank" class="social_media"><img src="./Icons/svg/facebook.svg" alt="facebook"></a>
         </div>
     </footer>
     </main>
