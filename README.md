@@ -1,1 +1,1 @@
-[Preview]https://drkl151.github.io/resort-batumi/Batumi_resort
+[Preview](https://drkl151.github.io/resort-batumi/Batumi_resort)
