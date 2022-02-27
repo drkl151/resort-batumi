@@ -1,46 +1,43 @@
 const offset = 100;
-const scrollUp = document.querySelector('.scroll_up');
-const scrollUpSvgPath = document.querySelector('.scroll_up-svg_path');
+const scrollUp = document.querySelector(".scroll_up");
+const scrollUpSvgPath = document.querySelector(".scroll_up-svg_path");
 const pathLength = scrollUpSvgPath.getTotalLength();
 
-console.log(pathLength);
-
 scrollUpSvgPath.style.strokeDasharray = `${pathLength} ${pathLength}`;
-scrollUpSvgPath.style.transiton = 'stroke-dashoffset 20ms';
+scrollUpSvgPath.style.transition = "stroke-dashoffset 20ms";
 
 const getTop = () => window.pageYOffset || document.documentElement.scrollTop;
 
 //updateDashoffset
 const updateDashoffset = () => {
-    const height = document.documentElement.scrollHeight - window.innerHeight;
-    const dashoffset = pathLength - (getTop() * pathLength / height);
+  const height = document.documentElement.scrollHeight - window.innerHeight;
+  const dashoffset = pathLength - (getTop() * pathLength) / height;
 
-    scrollUpSvgPath.style.strokeDashoffset = dashoffset;
-    console.log(dashoffset);
+  scrollUpSvgPath.style.strokeDashoffset = dashoffset;
 
-    if (dashoffset === 0) {
-        scrollUp.classList.add("scroll_bottom");
-    } else { scrollUp.classList.remove("scroll_bottom"); }
+  //color the arrow blue when the scroll is at the very bottom
+  if (dashoffset.toFixed() === "0" || dashoffset.toFixed() === "-0") {
+    scrollUp.style.color = "rgb(49, 175, 197)";
+  } else {
+    scrollUp.style.color = "rgba(125, 128, 125, 0.555)";
+  }
 };
 
+//onScroll event
+window.addEventListener("scroll", () => {
+  updateDashoffset();
 
-
-
-//onScroll
-window.addEventListener('scroll', () => {
-    updateDashoffset();
-
-    if (getTop() > offset) {
-        scrollUp.classList.add('scroll-up--active');
-    } else {
-        scrollUp.classList.remove('scroll-up--active');
-    }
+  if (getTop() > offset) {
+    scrollUp.classList.add("scroll-up--active");
+  } else {
+    scrollUp.classList.remove("scroll-up--active");
+  }
 });
 
-//click scrollUp
-scrollUp.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
+//click scrollUp and back to top of page
+scrollUp.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 });

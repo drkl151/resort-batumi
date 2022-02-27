@@ -1,1139 +1,1330 @@
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Comfortaa";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comfortaa";
 
-    .header,
-    .about_city,
-    .reasons_to_visit,
-    .the_nature_of_adjara-top_blocks,
-    .the_nature_of_adjara-bottom_blocks,
-    map {
-        max-width: 1280px;
-        margin: 0 auto;
+  .header,
+  .about_city,
+  .reasons_to_visit,
+  .the_nature_of_adjara-top_blocks,
+  .the_nature_of_adjara-bottom_blocks,
+  map {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .wrapper-content {
+    margin: 0 auto;
+
+    content {
+      flex: 1 0 auto;
     }
 
-    // main {
-    //     width: 97%;
-    //     margin: 0 auto;
-    // }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      height: 75px;
+      background-color: rgba(255, 255, 255, 0.678);
+      align-items: center;
 
-    .wrapper-content {
-        margin: 0 auto;
+      .logo {
+        width: 100px;
+        height: 80px;
+        font-size: 45px;
+        color: rgb(115, 159, 185);
+        text-decoration: none;
+        margin: 0 0 35px 50px;
+        font-weight: 900;
+      }
 
-        content {
-            flex: 1 0 auto;
+      .menu {
+        margin-right: 30px;
+
+        ul {
+          display: flex;
+
+          li {
+            a {
+              text-decoration: none;
+              color: rgb(115, 173, 207);
+            }
+
+            cursor: pointer;
+            display: block;
+            margin-left: 50px;
+            font-size: 18px;
+            font-weight: 800;
+          }
         }
-
-        .header {
-            display: flex;
-            justify-content: space-between;
-            height: 75px;
-            background-color: rgba(255, 255, 255, 0.678);
-            .logo {
-                width: 100px;
-                height: 80px;
-                font-size: 45px;
-                color: rgb(115, 159, 185);
-                text-decoration: none;
-                margin: 0 0 35px 50px;
-                font-weight: 900;
-            }
-
-            .menu {
-                margin: 12px 0px 0;
-                ul {
-                    display: flex;
-                    width: 800px;
-                    li {
-                        a {
-                            text-decoration: none;
-                            color: rgb(115, 173, 207);
-                        }
-                        cursor: pointer;
-                        display: block;
-                        margin-left: 55px;
-                        font-size: 18px;
-                        font-weight: 800;
-                    }
-                }
-            }
-        }
-
-        .preview {
-            position: relative;
-            background-image: url(./Img/background-main_page.jpg);
-            background-size: cover;
-            background-repeat: no-repeat;
-            min-height: 761px;
-
-            .title-wrapper {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 720px;
-                height: 430px;
-                text-align: center;
-                background-color: rgba(123, 129, 134, 0.521);
-                color: blanchedalmond;
-
-                .text_block {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-
-                    .subtitle {
-                        margin: 74px 20px 0;
-                        font-size: 20px;
-                    }
-
-                    .title {
-                        margin: 20px;
-                        font-size: 70px;
-                        font-weight: 900;
-                    }
-                }
-
-                .read_more {
-                    width: 230px;
-                    height: 35px;
-                    color: white;
-                    font-size: 20px;
-                    border: none;
-                    background-color: rgb(115, 173, 207);
-                    margin: 25px;
-                    cursor: pointer;
-                }
-
-                .decor-title-wrapper_one {
-                    position: absolute;
-                    width: 160px;
-                    height: 120px;
-                    right: 15px;
-                    top: 15px;
-                    border-right: 3px solid white;
-                    border-top: 3px solid white;
-                }
-
-                .decor-title-wrapper_two {
-                    position: absolute;
-                    width: 120px;
-                    height: 140px;
-                    left: 15px;
-                    bottom: 15px;
-                    border-left: 3px solid white;
-                    border-bottom: 3px solid white;
-                }
-            }
-        }
-
-        //breakpoints .previw, .title-wrapper
-        @media all and (max-width: 795px) {
-            .preview {
-                .title-wrapper {
-                    width: 600px;
-                    height: 530px;
-
-                    .text_block {
-                        .title {
-                            font-size: 65px;
-                        }
-                    }
-                }
-            }
-        }
-
-        @media all and (max-width: 680px) {
-            .preview {
-                .title-wrapper {
-                    width: 500px;
-                    height: 460px;
-
-                    .text_block {
-                        .subtitle {
-                            font-size: 18px;
-                        }
-                        .title {
-                            font-size: 52px;
-                        }
-                    }
-                }
-            }
-        }
-
-        @media all and (max-width: 550px) {
-            .preview {
-                .title-wrapper {
-                    width: 310px;
-                    height: 520px;
-
-                    .text_block {
-                        .subtitle {
-                            font-size: 12px;
-                        }
-                        .title {
-                            font-size: 36px;
-                            margin: 10px 0;
-                        }
-                    }
-                    .decor-title-wrapper_one,
-                    .decor-title-wrapper_two {
-                        width: 110px;
-                        height: 100px;
-                    }
-                }
-            }
-        }
-
-        #wrapper-about_city {
-            margin: 140px 50px 0;
-            .about_city {
-                position: relative;
-                margin: 0px auto 80px;
-                display: flex;
-                justify-content: space-evenly;
-
-                .text-about_city {
-                    margin: 30px 0 20px;
-                    width: 540px;
-                    z-index: 2;
-
-                    h4 {
-                        margin: 0 auto;
-                        text-align: center;
-                        font-size: 36px;
-                    }
-
-                    p {
-                        margin: 0 auto;
-                        padding: 20px;
-                        font-size: 20px;
-                    }
-                }
-
-                .img-about_city {
-                    width: 540px;
-                    height: 420px;
-                }
-            }
-        }
-
-        //breakpoints .about_city
-        @media all and (max-width: 1330px) {
-            #wrapper-about_city {
-                .about_city {
-                    .text-about_city {
-                        h4 {
-                            margin: 15px;
-                            font-size: 33px;
-                        }
-
-                        p {
-                            font-size: 19px;
-                        }
-                    }
-                    .img-about_city {
-                        width: 500px;
-                        height: 390px;
-                    }
-                }
-            }
-        }
-
-        @media all and (max-width: 1250px) {
-            #wrapper-about_city {
-                .about_city {
-                    .text-about_city {
-                        margin: 5px 25px 0px;
-                        h4 {
-                            margin: 15px;
-                            font-size: 28px;
-                        }
-
-                        p {
-                            font-size: 19px;
-                        }
-                    }
-                    .img-about_city {
-                        width: 500px;
-                        height: 390px;
-                    }
-                }
-            }
-        }
-        @media all and (max-width: 1090px) {
-            #wrapper-about_city {
-                .about_city {
-                    flex-direction: column;
-                    align-items: center;
-                    .text-about_city {
-                        margin: 5px 25px 0px;
-                        h4 {
-                            margin: 30px 0 5px;
-                            font-size: 31px;
-                        }
-
-                        p {
-                            font-size: 19px;
-                            text-align: center;
-                        }
-                    }
-                    .img-about_city {
-                        width: 580px;
-                        height: 420px;
-                    }
-                }
-                .center_block {
-                    flex-direction: column-reverse;
-                }
-            }
-        }
-
-        @media all and (max-width: 720px) {
-            #wrapper-about_city {
-                .about_city {
-                    .text-about_city {
-                        margin: 5px 25px 0px;
-                        h4 {
-                            margin: 20px 0 0;
-                            font-size: 31px;
-                        }
-
-                        p {
-                            font-size: 18px;
-                        }
-                    }
-                    .img-about_city {
-                        width: 500px;
-                        height: 390px;
-                    }
-                }
-            }
-        }
-
-        @media all and (max-width: 625px) {
-            #wrapper-about_city {
-                .about_city {
-                    .text-about_city {
-                        width: 430px;
-                        margin: 5px 25px 0px;
-                        h4 {
-                            margin: 20px 0 0;
-                            font-size: 31px;
-                        }
-
-                        p {
-                            font-size: 18px;
-                        }
-                    }
-                    .img-about_city {
-                        width: 440px;
-                        height: 340px;
-                    }
-                }
-            }
-        }
-
-        @media all and (max-width: 525px) {
-            #wrapper-about_city {
-                .about_city {
-                    .text-about_city {
-                        width: 340px;
-                        margin: 5px 25px 0px;
-                        h4 {
-                            margin: 20px 0 0;
-                            font-size: 19px;
-                        }
-
-                        p {
-                            font-size: 16px;
-                            padding: 14px;
-                        }
-                    }
-                    .img-about_city {
-                        width: 320px;
-                        height: 240px;
-                    }
-                }
-            }
-        }
-
-        #wrapper-reasons_to_visit {
-            margin-top: 155px;
-            padding-bottom: 40px;
-            width: 100%;
-            background: url(./Img/background-reason_to_visit.png);
-            background-position: -125px -20px;
-            background-repeat: no-repeat;
-
-            h2 {
-                text-align: center;
-                margin: 40px auto 40px;
-                font-size: 36px;
-            }
-
-            .decor_line-reasons_to_visit {
-                width: 200px;
-                border-top: 1px solid red;
-                margin: 0 auto 40px;
-            }
-
-            .reasons_to_visit {
-                margin: 0 auto 90px;
-                padding: 20px 20px 0;
-                display: flex;
-                justify-content: space-between;
-                flex-wrap: wrap;
-            }
-
-            .reasons_block {
-                margin: 20px;
-                padding: 25px 20px 0;
-                width: 300px;
-                height: 250px;
-                background-color: rgba(255, 255, 255, 0.74);
-                border-radius: 4px;
-
-                .reason_text_title {
-                    display: flex;
-                    margin: 0 auto;
-                    height: 90px;
-                    align-items: center;
-                }
-
-                h3 {
-                    margin: 0px 10px;
-                    display: inline;
-                    font-size: 75px;
-                    font-family: "Lobster";
-                    color: #4d672a;
-                }
-
-                h4 {
-                    padding: 0 10px;
-                    font-size: 26px;
-                    margin: 0;
-                }
-
-                p {
-                    font-size: 18px;
-                }
-            }
-
-            .reasons_block_top {
-                background-color: rgba(255, 255, 255, 0.164);
-            }
-        }
-
-        //breakpoints .reasons_to_visit
-        @media all and (max-width: 1240px) {
-            #wrapper-reasons_to_visit {
-                background-position: -129px 80px;
-                .reasons_to_visit {
-                    justify-content: space-evenly;
-
-                    .reasons_block {
-                        width: 350px;
-                        height: 240px;
-
-                        .reason_text_title {
-                            margin-bottom: 10px;
-                        }
-
-                        h4 {
-                            text-align: center;
-                            margin: 0;
-                        }
-
-                        p {
-                            text-align: center;
-                        }
-                    }
-
-                    #third_reason {
-                        background-color: rgba(255, 255, 255, 0.74);
-                    }
-                }
-            }
-        }
-
-        @media all and (max-width: 940px) {
-            #wrapper-reasons_to_visit {
-                background-position: -1015px 1200px;
-
-                .title-reasons_to_visit {
-                    font-size: 42px;
-                }
-
-                .reasons_to_visit {
-                    .reasons_block {
-                        width: 480px;
-                        height: 250px;
-                        margin-top: 40px;
-
-                        h3 {
-                            font-size: 90px;
-                            margin: 0px 20px;
-                        }
-
-                        h4 {
-                            font-size: 33px;
-                        }
-
-                        p {
-                            font-size: 22px;
-                        }
-                    }
-
-                    #third_reason {
-                        background-color: rgba(255, 255, 255, 0.74);
-                    }
-                }
-            }
-        }
-
-        @media all and (max-width: 600px) {
-            #wrapper-reasons_to_visit {
-                .title-reasons_to_visit {
-                    font-size: 35px;
-                    margin: 0px 20px 35px;
-                }
-
-                .decor_line-reasons_to_visit {
-                    width: 130px;
-                    margin: 0 auto;
-                }
-
-                .reasons_to_visit {
-                    .reasons_block {
-                        width: 310px;
-                        height: 240px;
-                        margin: 25px auto 0;
-
-                        .reason_text_title {
-                            margin-bottom: 10px;
-                        }
-
-                        h3 {
-                            font-size: 56px;
-                            margin: 0px 13px;
-                        }
-
-                        h4 {
-                            font-size: 24px;
-                        }
-
-                        p {
-                            font-size: 17px;
-                        }
-                    }
-                }
-            }
-        }
-
-        #what_to_try {
-            max-width: 1280px;
-            margin: 120px auto 80px;
-            h3 {
-                text-align: center;
-                margin: 20 auto;
-                font-size: 36px;
-            }
-
-            .decor_line-what_to_try {
-                width: 200px;
-                border-top: 1px solid red;
-                margin: 0 auto;
-            }
-
-            h4 {
-                text-align: center;
-                margin: 20 auto;
-                padding: 10px 60px;
-                font-size: 25px;
-            }
-
-            .attractions_Batumi {
-                margin: 70px 0;
-                width: 100%;
-                display: flex;
-                justify-content: space-between;
-
-                .attractions {
-                    width: 280px;
-                    height: 420px;
-                    position: relative;
-                    background-size: cover;
-
-                    a {
-                        text-decoration: none;
-                        width: 90%;
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        margin: 0 auto;
-                        padding: 10px 0;
-                        text-align: center;
-                        background-color: #fff;
-                        color: black;
-                        font-size: 20px;
-                    }
-                }
-
-                .one {
-                    background-image: url(./Img/photo_why_to_try/georgian_nature.jpeg);
-                    background-position: center;
-                }
-
-                .second {
-                    background-image: url(./Img/photo_why_to_try/georgian_cuisine.jpg);
-                    background-position: right;
-                }
-
-                .three {
-                    background-image: url(./Img/photo_why_to_try/black_sea.jpg);
-                    background-position: center;
-                }
-
-                .four {
-                    background-image: url(./Img/photo_why_to_try/sights_of_batumi.jpg);
-                    background-position: center;
-                }
-            }
-        }
-
-        //breakpoints #what_to_try
-
-        @media all and (max-width: 1350px) {
-            #what_to_try {
-                .attractions_Batumi {
-                    flex-wrap: wrap;
-                    justify-content: center;
-
-                    .attractions {
-                        width: 315px;
-                        height: 480px;
-                        margin: 0 60px 60px;
-                    }
-                }
-            }
-        }
-
-        @media all and (max-width: 890px) {
-            #what_to_try {
-                h3 {
-                    padding: 0px 25px;
-                    font-size: 32px;
-                }
-                h4 {
-                    padding: 0px 25px;
-                    font-size: 19px;
-                }
-
-                .decor_line-what_to_try {
-                    width: 130px;
-                }
-                .attractions_Batumi {
-                    .attractions {
-                        width: 490px;
-                        height: 300px;
-                        margin: 0 30px 60px;
-                    }
-                }
-            }
-        }
-
-        @media all and (max-width: 400px) {
-            #what_to_try {
-                h4 {
-                    font-size: 18px;
-                }
-            }
-        }
-
-        .wrapper-the_nature_of_adjara {
-            width: 100%;
-            height: 850px;
-            background-image: url(./Img/background-the_nature_of_adjara.jpeg);
-            background-position: bottom;
-            margin-bottom: 120px;
-
-            .the_nature_of_adjara-top_blocks {
-                display: flex;
-                justify-content: space-between;
-
-                .text-the_nature_of_adjara-top_blocks {
-                    margin: 0 0 0 40px;
-                    padding: 20px 30px 0;
-                    width: 290px;
-
-                    h4 {
-                        margin: 10px 40px 0 0;
-                        font-size: 30px;
-                    }
-                }
-
-                .img-the_nature_of_adjara {
-                    display: block;
-                    width: 830px;
-                    height: 600px;
-                    margin-right: 20px;
-                    border-radius: 2px;
-                }
-            }
-
-            .the_nature_of_adjara-bottom_blocks {
-                display: flex;
-                justify-content: space-evenly;
-                position: relative;
-
-                .img_waterfall {
-                    width: 500px;
-                    height: 300px;
-                    position: relative;
-                    left: -70px;
-                    top: -175px;
-                    border-radius: 2px;
-                }
-
-                .text-the_nature_of_adjara-bottom_blocks {
-                    width: 485px;
-                    height: 120px;
-                    background-color: #fff;
-                    font-size: 22px;
-                    padding: 45px 0;
-                    text-align: center;
-                    position: relative;
-                    left: 35px;
-                    top: -75px;
-                    border-radius: 2px;
-                }
-            }
-        }
-
-        @media all and (max-width: 1350px) {
-            .wrapper-the_nature_of_adjara {
-                height: 770px;
-                .the_nature_of_adjara-top_blocks {
-                    justify-content: space-evenly;
-                    .img-the_nature_of_adjara {
-                        width: 785px;
-                        height: 530px;
-                        margin-right: 40px;
-                    }
-                }
-
-                .the_nature_of_adjara-bottom_blocks {
-                    .img_waterfall {
-                        width: 460px;
-                        height: 280px;
-                        left: -15px;
-                        top: -110px;
-                    }
-                    .text-the_nature_of_adjara-bottom_blocks {
-                        width: 480px;
-                        height: 85px;
-                        font-size: 19px;
-                        padding: 35px 12px;
-                        left: 20px;
-                        top: -70px;
-                    }
-                }
-            }
-        }
-
-        @media all and (max-width: 1250px) {
-            .wrapper-the_nature_of_adjara {
-                height: 700px;
-                background-position: -10px -55px;
-                background-repeat: no-repeat;
-                .the_nature_of_adjara-top_blocks {
-                    .text-the_nature_of_adjara-top_blocks {
-                        margin: 0px 0 0 90px;
-                        padding: 20px 0px 0;
-                        width: 290px;
-
-                        h4 {
-                            font-size: 26px;
-                        }
-                    }
-
-                    .img-the_nature_of_adjara {
-                        width: 735px;
-                        height: 480px;
-                        margin-right: 55px;
-                    }
-                }
-
-                .the_nature_of_adjara-bottom_blocks {
-                    .img_waterfall {
-                        width: 415px;
-                        height: 260px;
-                        left: -15px;
-                        top: -100px;
-                    }
-                    .text-the_nature_of_adjara-bottom_blocks {
-                        width: 455px;
-                        height: 80px;
-                        font-size: 18px;
-                        padding: 25px 10px;
-                        left: -3px;
-                        top: -65px;
-                    }
-                }
-            }
-        }
-
-        @media all and (max-width: 1150px) {
-            .wrapper-the_nature_of_adjara {
-                height: 630px;
-                .the_nature_of_adjara-top_blocks {
-                    .text-the_nature_of_adjara-top_blocks {
-                        margin: 0px 0 0 90px;
-                        padding: 20px 0px 0;
-                        width: 290px;
-
-                        h4 {
-                            font-size: 24px;
-                        }
-                    }
-
-                    .img-the_nature_of_adjara {
-                        width: 670px;
-                        height: 430px;
-                        margin-right: 75px;
-                    }
-                }
-
-                .the_nature_of_adjara-bottom_blocks {
-                    .img_waterfall {
-                        width: 380px;
-                        height: 230px;
-                        left: -15px;
-                        top: -85px;
-                    }
-                    .text-the_nature_of_adjara-bottom_blocks {
-                        width: 410px;
-                        height: 70px;
-                        font-size: 16px;
-                    }
-                }
-            }
-        }
-        @media all and (max-width: 1110px) {
-            .wrapper-the_nature_of_adjara {
-                .the_nature_of_adjara-top_blocks {
-                    justify-content: space-evenly;
-                    .text-the_nature_of_adjara-top_blocks {
-                        margin: 0px 0 0 90px;
-                        padding: 20px 0px 0;
-                        width: 290px;
-
-                        h4 {
-                            font-size: 23px;
-                        }
-                    }
-
-                    .img-the_nature_of_adjara {
-                        width: 610px;
-                        height: 425px;
-                        margin-right: 75px;
-                    }
-                }
-
-                .the_nature_of_adjara-bottom_blocks {
-                    .img_waterfall {
-                        width: 350px;
-                        height: 205px;
-                        left: -25px;
-                        top: -75px;
-                    }
-                    .text-the_nature_of_adjara-bottom_blocks {
-                        width: 395px;
-                        height: 60px;
-                        font-size: 15px;
-                    }
-                }
-            }
-        }
-
-        @media all and (max-width: 970px) {
-            .wrapper-the_nature_of_adjara {
-                height: 855px;
-                .the_nature_of_adjara-top_blocks {
-                    flex-direction: column;
-                    align-items: center;
-                    padding: 0 30px;
-                    .text-the_nature_of_adjara-top_blocks {
-                        margin: 0px auto 30px;
-                        padding: 0px;
-                        width: 580px;
-                        text-align: center;
-
-                        h4 {
-                            margin: 0;
-                            font-size: 29px;
-                        }
-
-                        p {
-                            font-size: 18px;
-                        }
-                    }
-
-                    .img-the_nature_of_adjara {
-                        width: 560px;
-                        height: 400px;
-                        margin-right: 0px;
-                    }
-                }
-
-                .the_nature_of_adjara-bottom_blocks {
-                    .img_waterfall {
-                        width: 313px;
-                        height: 190px;
-                        left: -20px;
-                        top: -58px;
-                    }
-                    .text-the_nature_of_adjara-bottom_blocks {
-                        width: 220px;
-                        height: 120px;
-                        font-size: 15px;
-                        padding: 30px 23px;
-                    }
-                }
-            }
-        }
-
-        @media all and (max-width: 740px) {
-            .wrapper-the_nature_of_adjara {
-                height: 940px;
-                background-position: 0px 30px;
-                .the_nature_of_adjara-top_blocks {
-                    .text-the_nature_of_adjara-top_blocks {
-                        width: 470px;
-                        h4 {
-                            font-size: 24px;
-                        }
-
-                        p {
-                            font-size: 16px;
-                        }
-                    }
-
-                    .img-the_nature_of_adjara {
-                        width: 490px;
-                        height: 355px;
-                    }
-                }
-
-                .the_nature_of_adjara-bottom_blocks {
-                    flex-direction: column-reverse;
-                    align-items: center;
-                    .img_waterfall {
-                        width: 430px;
-                        height: 250px;
-                        left: 0px;
-                        top: -80px;
-                    }
-                    .text-the_nature_of_adjara-bottom_blocks {
-                        width: 285px;
-                        height: 73px;
-                        font-size: 14px;
-                        padding: 20px 20px;
-                        left: 0px;
-                        top: -40px;
-                    }
-                }
-            }
-        }
-
-        @media all and (max-width: 570px) {
-            .wrapper-the_nature_of_adjara {
-                height: 1015px;
-                background-position: 0px 100px;
-
-                .the_nature_of_adjara-top_blocks {
-                    .text-the_nature_of_adjara-top_blocks {
-                        width: 355px;
-                        h4 {
-                            font-size: 22px;
-                        }
-
-                        p {
-                            font-size: 15px;
-                        }
-                    }
-
-                    .img-the_nature_of_adjara {
-                        width: 400px;
-                        height: 290px;
-                    }
-                }
-
-                .the_nature_of_adjara-bottom_blocks {
-                    .img_waterfall {
-                        width: 395px;
-                        height: 245px;
-                        top: 30px;
-                    }
-                    .text-the_nature_of_adjara-bottom_blocks {
-                        width: 280px;
-                        height: 105px;
-                        font-size: 15px;
-                        left: 0px;
-                        top: 15px;
-                    }
-                }
-            }
-        }
-
-        @media all and (max-width: 470px) {
-            .wrapper-the_nature_of_adjara {
-                height: 920px;
-                background-position: -5px 20px;
-
-                .the_nature_of_adjara-top_blocks {
-                    padding: 0px;
-                    .text-the_nature_of_adjara-top_blocks {
-                        width: 290px;
-                        h4 {
-                            font-size: 18px;
-                        }
-                    }
-
-                    .img-the_nature_of_adjara {
-                        width: 300px;
-                        height: 210px;
-                    }
-                }
-
-                .the_nature_of_adjara-bottom_blocks {
-                    .img_waterfall {
-                        width: 300px;
-                        height: 210px;
-                        top: 50px;
-                    }
-                    .text-the_nature_of_adjara-bottom_blocks {
-                        width: 250px;
-                        height: 115px;
-                        top: 25px;
-                    }
-                }
-            }
-        }
-
-        #map_block {
-            box-sizing: border-box;
-            width: 100%;
-            margin: 0 auto 90px;
-            text-align: center;
-
-            h4 {
-                font-size: 25px;
-                margin: 20px 30px;
-            }
-
-            .map {
-                width: 800px;
-                height: 450px;
-                margin: 0 30px;
-            }
-        }
-    }
-
-    .scroll_up {
-        position: fixed;
-        right: 50px;
-        bottom: 50px;
-        z-index: 1000;
-        width: 60px;
-        height: 60px;
-        color: rgba(125, 128, 125, 0.555);
+      }
+
+      .burger-menu-wrapper {
+        display: none;
+      }
+
+      .burger-menu-icon {
+        width: 43px;
+        height: 43px;
+        margin-right: 30px;
+        fill: #729fb8;
         cursor: pointer;
-        visibility: hidden;
-        border-radius: 50%;
-        box-shadow: inset 0 0 0 4px rgba(125, 128, 125, 0.555);
-        opacity: 0;
-        transition: 0.2s;
-        transform: translateY(25px);
+        display: none;
+      }
+    }
 
-        &::before {
-            content: "↑";
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            width: 100%;
-            font-size: 28px;
-            font-weight: 900;
+    .burger-menu {
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 20;
+      display: none;
+
+      &__ul {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        margin: 0;
+        padding: 15px 0 5px 0;
+        background: white;
+
+        .close-icon {
+          width: 36px;
+          height: 36px;
+          position: absolute;
+          margin: 0px 30px 0 0;
+          align-self: flex-end;
+          fill: #729fb8;
+          cursor: pointer;
         }
 
-        &:hover {
-            color: rgb(49, 175, 197);
-        }
+        li {
+          &:hover {
+            background: #d8d8d888;
+          }
 
-        .scroll_up-svg {
-            .scroll_up-svg_path {
-                box-sizing: border-box;
-                fill: none;
-                stroke: rgb(49, 175, 197);
-                stroke-width: 4px;
-                transition: 0.2s;
+          a {
+            &:first-child {
+              width: calc(100% - 110px);
             }
+
+            cursor: pointer;
+            display: block;
+            font-size: 22px;
+            font-weight: 800;
+            text-decoration: none;
+            color: rgb(115, 173, 207);
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            line-height: 60px;
+            padding-left: 26px;
+
+            &:hover {
+              font-size: 23px;
+            }
+          }
         }
+      }
     }
 
-    .scroll_bottom {
-        color: rgb(49, 175, 197);
+    //breakpoints header
+    @media all and (max-width: 1050px) {
+      .header {
+        display: flex;
+        justify-content: space-between;
+        height: 75px;
+        background-color: rgba(255, 255, 255, 0.678);
+        align-items: center;
+
+        .logo {
+          font-size: 35px;
+        }
+
+        .menu {
+          margin-right: 30px;
+
+          ul {
+            display: flex;
+
+            li {
+              margin-left: 33px;
+
+              a {
+                text-decoration: none;
+                color: rgb(115, 173, 207);
+              }
+
+              font-size: 16px;
+            }
+          }
+        }
+      }
     }
 
-    .scroll-up--active {
-        visibility: visible;
-        opacity: 1;
-        transform: translateY(0);
+    @media all and (max-width: 900px) {
+      .header {
+        .menu {
+          display: none;
+        }
+
+        .burger-menu-wrapper,
+        .burger-menu,
+        .burger-menu-icon {
+          display: block;
+        }
+
+        .burger-menu__ul {
+          display: flex;
+        }
+      }
     }
 
-    .footer {
-        background-color: rgba(120, 122, 122, 0.432);
-        padding: 50px 20px 70px 20px;
+    @media all and (max-width: 550px) {
+      .header {
+        .burger-menu-wrapper {
+          .burger-menu {
+            &__ul {
+              li {
+                a {
+                  font-size: 18px;
 
-        h4 {
-            width: 580px;
+                  &:hover {
+                    font-size: 19px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .preview {
+      position: relative;
+      background-image: url(./Img/background-main_page.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      min-height: 761px;
+
+      .title-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 720px;
+        height: 430px;
+        text-align: center;
+        background-color: rgba(123, 129, 134, 0.521);
+        color: blanchedalmond;
+
+        .text_block {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          .subtitle {
+            margin: 74px 20px 0;
+            font-size: 20px;
+          }
+
+          .title {
+            margin: 20px;
+            font-size: 70px;
+            font-weight: 900;
+          }
+        }
+
+        .read_more {
+          width: 230px;
+          height: 35px;
+          color: white;
+          font-size: 20px;
+          border: none;
+          background-color: rgb(115, 173, 207);
+          box-shadow: inset 0px -1px 3px rgb(107, 138, 175);
+          margin: 25px;
+          cursor: pointer;
+          transition: 0.3s;
+
+          &:hover {
+            transform: scale(102%);
+          }
+        }
+
+        .decor-title-wrapper_one {
+          position: absolute;
+          width: 160px;
+          height: 120px;
+          right: 15px;
+          top: 15px;
+          border-right: 3px solid white;
+          border-top: 3px solid white;
+        }
+
+        .decor-title-wrapper_two {
+          position: absolute;
+          width: 120px;
+          height: 140px;
+          left: 15px;
+          bottom: 15px;
+          border-left: 3px solid white;
+          border-bottom: 3px solid white;
+        }
+      }
+    }
+
+    //breakpoints .preview, .title-wrapper
+    @media all and (max-width: 795px) {
+      .preview {
+        .title-wrapper {
+          width: 600px;
+          height: 530px;
+
+          .text_block {
+            .title {
+              font-size: 65px;
+            }
+          }
+        }
+      }
+    }
+
+    @media all and (max-width: 680px) {
+      .preview {
+        .title-wrapper {
+          width: 500px;
+          height: 460px;
+
+          .text_block {
+            .subtitle {
+              font-size: 18px;
+            }
+            .title {
+              font-size: 52px;
+            }
+          }
+        }
+      }
+    }
+
+    @media all and (max-width: 550px) {
+      .preview {
+        .title-wrapper {
+          width: 310px;
+          height: 520px;
+
+          .text_block {
+            .subtitle {
+              font-size: 12px;
+            }
+            .title {
+              font-size: 36px;
+              margin: 10px 0;
+            }
+          }
+          .decor-title-wrapper_one,
+          .decor-title-wrapper_two {
+            width: 110px;
+            height: 100px;
+          }
+        }
+      }
+    }
+
+    #wrapper-about_city {
+      margin: 140px 50px 0;
+      .about_city {
+        position: relative;
+        margin: 0px auto 80px;
+        display: flex;
+        justify-content: space-evenly;
+
+        .text-about_city {
+          margin: 30px 0 20px;
+          width: 540px;
+          z-index: 2;
+
+          h4 {
             margin: 0 auto;
             text-align: center;
-            font-size: 24px;
+            font-size: 36px;
+          }
+
+          p {
+            margin: 0 auto;
+            padding: 20px;
+            font-size: 20px;
+          }
         }
 
-        .decor_line-footer {
-            width: 70%;
-            border-top: 1px solid rgb(0, 0, 0);
-            margin: 40px auto 20px;
+        .img-about_city {
+          width: 540px;
+          height: 420px;
+        }
+      }
+    }
+
+    //breakpoints .about_city
+    @media all and (max-width: 1330px) {
+      #wrapper-about_city {
+        .about_city {
+          .text-about_city {
+            h4 {
+              margin: 15px;
+              font-size: 33px;
+            }
+
+            p {
+              font-size: 19px;
+            }
+          }
+          .img-about_city {
+            width: 500px;
+            height: 390px;
+          }
+        }
+      }
+    }
+
+    @media all and (max-width: 1250px) {
+      #wrapper-about_city {
+        .about_city {
+          .text-about_city {
+            margin: 5px 25px 0px;
+            h4 {
+              margin: 15px;
+              font-size: 28px;
+            }
+
+            p {
+              font-size: 19px;
+            }
+          }
+          .img-about_city {
+            width: 500px;
+            height: 390px;
+          }
+        }
+      }
+    }
+
+    @media all and (max-width: 1090px) {
+      #wrapper-about_city {
+        .about_city {
+          flex-direction: column;
+          align-items: center;
+          .text-about_city {
+            margin: 5px 25px 0px;
+            h4 {
+              margin: 30px 0 5px;
+              font-size: 31px;
+            }
+
+            p {
+              font-size: 19px;
+              text-align: center;
+            }
+          }
+          .img-about_city {
+            width: 580px;
+            height: 420px;
+          }
+        }
+        .center_block {
+          flex-direction: column-reverse;
+        }
+      }
+    }
+
+    @media all and (max-width: 720px) {
+      #wrapper-about_city {
+        .about_city {
+          .text-about_city {
+            margin: 5px 25px 0px;
+            h4 {
+              margin: 20px 0 0;
+              font-size: 31px;
+            }
+
+            p {
+              font-size: 18px;
+            }
+          }
+          .img-about_city {
+            width: 500px;
+            height: 390px;
+          }
+        }
+      }
+    }
+
+    @media all and (max-width: 625px) {
+      #wrapper-about_city {
+        .about_city {
+          .text-about_city {
+            width: 430px;
+            margin: 5px 25px 0px;
+            h4 {
+              margin: 20px 0 0;
+              font-size: 31px;
+            }
+
+            p {
+              font-size: 18px;
+            }
+          }
+          .img-about_city {
+            width: 440px;
+            height: 340px;
+          }
+        }
+      }
+    }
+
+    @media all and (max-width: 525px) {
+      #wrapper-about_city {
+        .about_city {
+          .text-about_city {
+            width: 340px;
+            margin: 5px 25px 0px;
+            h4 {
+              margin: 20px 0 0;
+              font-size: 19px;
+            }
+
+            p {
+              font-size: 16px;
+              padding: 14px;
+            }
+          }
+          .img-about_city {
+            width: 320px;
+            height: 240px;
+          }
+        }
+      }
+    }
+
+    #wrapper-reasons_to_visit {
+      margin-top: 155px;
+      padding-bottom: 40px;
+      width: 100%;
+      background: url(./Img/background-reason_to_visit.png);
+      background-position: -125px -20px;
+      background-repeat: no-repeat;
+
+      h2 {
+        text-align: center;
+        margin: 40px auto 40px;
+        font-size: 36px;
+      }
+
+      .decor_line-reasons_to_visit {
+        width: 200px;
+        border-top: 1px solid red;
+        margin: 0 auto 40px;
+      }
+
+      .reasons_to_visit {
+        margin: 0 auto 90px;
+        padding: 20px 20px 0;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .reasons_block {
+        margin: 20px;
+        padding: 25px 20px 0;
+        width: 300px;
+        height: 250px;
+        background-color: rgba(255, 255, 255, 0.74);
+        border-radius: 4px;
+
+        .reason_text_title {
+          display: flex;
+          margin: 0 auto;
+          height: 90px;
+          align-items: center;
+        }
+
+        h3 {
+          margin: 0px 10px;
+          display: inline;
+          font-size: 75px;
+          font-family: "Lobster";
+          color: #4d672a;
+        }
+
+        h4 {
+          padding: 0 10px;
+          font-size: 26px;
+          margin: 0;
+        }
+
+        p {
+          font-size: 18px;
+        }
+      }
+
+      .reasons_block_top {
+        background-color: rgba(255, 255, 255, 0.164);
+      }
+    }
+
+    //breakpoints .reasons_to_visit
+    @media all and (max-width: 1240px) {
+      #wrapper-reasons_to_visit {
+        background-position: -129px 80px;
+        .reasons_to_visit {
+          justify-content: space-evenly;
+
+          .reasons_block {
+            width: 350px;
+            height: 240px;
+
+            .reason_text_title {
+              margin-bottom: 10px;
+            }
+
+            h4 {
+              text-align: center;
+              margin: 0;
+            }
+
+            p {
+              text-align: center;
+            }
+          }
+
+          #third_reason {
+            background-color: rgba(255, 255, 255, 0.74);
+          }
+        }
+      }
+    }
+
+    @media all and (max-width: 940px) {
+      #wrapper-reasons_to_visit {
+        background-position: -1015px 1200px;
+
+        .title-reasons_to_visit {
+          font-size: 42px;
+        }
+
+        .reasons_to_visit {
+          .reasons_block {
+            width: 480px;
+            height: 250px;
+            margin-top: 40px;
+
+            h3 {
+              font-size: 90px;
+              margin: 0px 20px;
+            }
+
+            h4 {
+              font-size: 33px;
+            }
+
+            p {
+              font-size: 22px;
+            }
+          }
+
+          #third_reason {
+            background-color: rgba(255, 255, 255, 0.74);
+          }
+        }
+      }
+    }
+
+    @media all and (max-width: 600px) {
+      #wrapper-reasons_to_visit {
+        .title-reasons_to_visit {
+          font-size: 35px;
+          margin: 0px 20px 35px;
+        }
+
+        .decor_line-reasons_to_visit {
+          width: 130px;
+          margin: 0 auto;
+        }
+
+        .reasons_to_visit {
+          .reasons_block {
+            width: 310px;
+            height: 240px;
+            margin: 25px auto 0;
+
+            .reason_text_title {
+              margin-bottom: 10px;
+            }
+
+            h3 {
+              font-size: 56px;
+              margin: 0px 13px;
+            }
+
+            h4 {
+              font-size: 24px;
+            }
+
+            p {
+              font-size: 17px;
+            }
+          }
+        }
+      }
+    }
+
+    #what_to_try {
+      max-width: 1280px;
+      margin: 120px auto 80px;
+
+      h3 {
+        text-align: center;
+        margin: 20 auto;
+        font-size: 36px;
+      }
+
+      .decor_line-what_to_try {
+        width: 200px;
+        border-top: 1px solid red;
+        margin: 0 auto;
+      }
+
+      h4 {
+        text-align: center;
+        margin: 20 auto;
+        padding: 10px 60px;
+        font-size: 25px;
+      }
+
+      .attractions_Batumi {
+        margin: 70px 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .attractions {
+          width: 280px;
+          height: 420px;
+          position: relative;
+          background-size: cover;
+
+          a {
+            text-decoration: none;
+            width: 90%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0 auto;
+            padding: 10px 0;
+            text-align: center;
+            background-color: #fff;
+            color: black;
+            font-size: 20px;
+          }
+        }
+
+        .one {
+          background-image: url(./Img/photo_why_to_try/georgian_nature.jpeg);
+          background-position: center;
+        }
+
+        .second {
+          background-image: url(./Img/photo_why_to_try/georgian_cuisine.jpg);
+          background-position: right;
+        }
+
+        .three {
+          background-image: url(./Img/photo_why_to_try/black_sea.jpg);
+          background-position: center;
+        }
+
+        .four {
+          background-image: url(./Img/photo_why_to_try/sights_of_batumi.jpg);
+          background-position: center;
+        }
+      }
+    }
+
+    //breakpoints #what_to_try
+    @media all and (max-width: 1350px) {
+      #what_to_try {
+        .attractions_Batumi {
+          flex-wrap: wrap;
+          justify-content: center;
+
+          .attractions {
+            width: 315px;
+            height: 480px;
+            margin: 0 60px 60px;
+          }
+        }
+      }
+    }
+
+    @media all and (max-width: 890px) {
+      #what_to_try {
+        h3 {
+          padding: 0px 25px;
+          font-size: 32px;
+        }
+        h4 {
+          padding: 0px 25px;
+          font-size: 19px;
+        }
+
+        .decor_line-what_to_try {
+          width: 130px;
+        }
+        .attractions_Batumi {
+          .attractions {
+            width: 490px;
+            height: 300px;
+            margin: 0 30px 60px;
+          }
+        }
+      }
+    }
+
+    @media all and (max-width: 400px) {
+      #what_to_try {
+        h4 {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .wrapper-the_nature_of_adjara {
+      width: 100%;
+      height: 850px;
+      background-image: url(./Img/background-the_nature_of_adjara.jpeg);
+      background-position: bottom;
+      margin-bottom: 120px;
+
+      .the_nature_of_adjara-top_blocks {
+        display: flex;
+        justify-content: space-between;
+
+        .text-the_nature_of_adjara-top_blocks {
+          margin: 0 0 0 40px;
+          padding: 20px 30px 0;
+          width: 290px;
+
+          h4 {
+            margin: 10px 40px 0 0;
+            font-size: 30px;
+          }
+        }
+
+        .img-the_nature_of_adjara {
+          display: block;
+          width: 830px;
+          height: 600px;
+          margin-right: 20px;
+          border-radius: 2px;
+        }
+      }
+
+      .the_nature_of_adjara-bottom_blocks {
+        display: flex;
+        justify-content: space-evenly;
+        position: relative;
+
+        .img_waterfall {
+          width: 500px;
+          height: 300px;
+          position: relative;
+          left: -70px;
+          top: -175px;
+          border-radius: 2px;
+        }
+
+        .text-the_nature_of_adjara-bottom_blocks {
+          width: 485px;
+          height: 120px;
+          background-color: #fff;
+          font-size: 22px;
+          padding: 45px 0;
+          text-align: center;
+          position: relative;
+          left: 35px;
+          top: -75px;
+          border-radius: 2px;
+        }
+      }
+    }
+
+    @media all and (max-width: 1350px) {
+      .wrapper-the_nature_of_adjara {
+        height: 770px;
+        .the_nature_of_adjara-top_blocks {
+          justify-content: space-evenly;
+          .img-the_nature_of_adjara {
+            width: 785px;
+            height: 530px;
+            margin-right: 40px;
+          }
+        }
+
+        .the_nature_of_adjara-bottom_blocks {
+          .img_waterfall {
+            width: 460px;
+            height: 280px;
+            left: -15px;
+            top: -110px;
+          }
+          .text-the_nature_of_adjara-bottom_blocks {
+            width: 480px;
+            height: 85px;
+            font-size: 19px;
+            padding: 35px 12px;
+            left: 20px;
+            top: -70px;
+          }
+        }
+      }
+    }
+
+    @media all and (max-width: 1250px) {
+      .wrapper-the_nature_of_adjara {
+        height: 700px;
+        background-position: -10px -55px;
+        background-repeat: no-repeat;
+        .the_nature_of_adjara-top_blocks {
+          .text-the_nature_of_adjara-top_blocks {
+            margin: 0px 0 0 90px;
+            padding: 20px 0px 0;
+            width: 290px;
+
+            h4 {
+              font-size: 26px;
+            }
+          }
+
+          .img-the_nature_of_adjara {
+            width: 735px;
+            height: 480px;
+            margin-right: 55px;
+          }
+        }
+
+        .the_nature_of_adjara-bottom_blocks {
+          .img_waterfall {
+            width: 415px;
+            height: 260px;
+            left: -15px;
+            top: -100px;
+          }
+          .text-the_nature_of_adjara-bottom_blocks {
+            width: 455px;
+            height: 80px;
+            font-size: 18px;
+            padding: 25px 10px;
+            left: -3px;
+            top: -65px;
+          }
+        }
+      }
+    }
+
+    @media all and (max-width: 1150px) {
+      .wrapper-the_nature_of_adjara {
+        height: 630px;
+        .the_nature_of_adjara-top_blocks {
+          .text-the_nature_of_adjara-top_blocks {
+            margin: 0px 0 0 90px;
+            padding: 20px 0px 0;
+            width: 290px;
+
+            h4 {
+              font-size: 24px;
+            }
+          }
+
+          .img-the_nature_of_adjara {
+            width: 670px;
+            height: 430px;
+            margin-right: 75px;
+          }
+        }
+
+        .the_nature_of_adjara-bottom_blocks {
+          .img_waterfall {
+            width: 380px;
+            height: 230px;
+            left: -15px;
+            top: -85px;
+          }
+          .text-the_nature_of_adjara-bottom_blocks {
+            width: 410px;
+            height: 70px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    @media all and (max-width: 1110px) {
+      .wrapper-the_nature_of_adjara {
+        .the_nature_of_adjara-top_blocks {
+          justify-content: space-evenly;
+          .text-the_nature_of_adjara-top_blocks {
+            margin: 0px 0 0 90px;
+            padding: 20px 0px 0;
+            width: 290px;
+
+            h4 {
+              font-size: 23px;
+            }
+          }
+
+          .img-the_nature_of_adjara {
+            width: 610px;
+            height: 425px;
+            margin-right: 75px;
+          }
+        }
+
+        .the_nature_of_adjara-bottom_blocks {
+          .img_waterfall {
+            width: 350px;
+            height: 205px;
+            left: -25px;
+            top: -75px;
+          }
+          .text-the_nature_of_adjara-bottom_blocks {
+            width: 395px;
+            height: 60px;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+
+    @media all and (max-width: 970px) {
+      .wrapper-the_nature_of_adjara {
+        height: 855px;
+        .the_nature_of_adjara-top_blocks {
+          flex-direction: column;
+          align-items: center;
+          padding: 0 30px;
+          .text-the_nature_of_adjara-top_blocks {
+            margin: 0px auto 30px;
+            padding: 0px;
+            width: 580px;
+            text-align: center;
+
+            h4 {
+              margin: 0;
+              font-size: 29px;
+            }
+
+            p {
+              font-size: 18px;
+            }
+          }
+
+          .img-the_nature_of_adjara {
+            width: 560px;
+            height: 400px;
+            margin-right: 0px;
+          }
+        }
+
+        .the_nature_of_adjara-bottom_blocks {
+          .img_waterfall {
+            width: 313px;
+            height: 190px;
+            left: -20px;
+            top: -58px;
+          }
+          .text-the_nature_of_adjara-bottom_blocks {
+            width: 220px;
+            height: 120px;
+            font-size: 15px;
+            padding: 30px 23px;
+          }
+        }
+      }
+    }
+
+    @media all and (max-width: 740px) {
+      .wrapper-the_nature_of_adjara {
+        height: 940px;
+        background-position: 0px 30px;
+        .the_nature_of_adjara-top_blocks {
+          .text-the_nature_of_adjara-top_blocks {
+            width: 470px;
+            h4 {
+              font-size: 24px;
+            }
+
+            p {
+              font-size: 16px;
+            }
+          }
+
+          .img-the_nature_of_adjara {
+            width: 490px;
+            height: 355px;
+          }
+        }
+
+        .the_nature_of_adjara-bottom_blocks {
+          flex-direction: column-reverse;
+          align-items: center;
+          .img_waterfall {
+            width: 430px;
+            height: 250px;
+            left: 0px;
+            top: -80px;
+          }
+          .text-the_nature_of_adjara-bottom_blocks {
+            width: 285px;
+            height: 73px;
+            font-size: 14px;
+            padding: 20px 20px;
+            left: 0px;
+            top: -40px;
+          }
+        }
+      }
+    }
+
+    @media all and (max-width: 570px) {
+      .wrapper-the_nature_of_adjara {
+        height: 1015px;
+        background-position: 0px 100px;
+
+        .the_nature_of_adjara-top_blocks {
+          .text-the_nature_of_adjara-top_blocks {
+            width: 355px;
+            h4 {
+              font-size: 22px;
+            }
+
+            p {
+              font-size: 15px;
+            }
+          }
+
+          .img-the_nature_of_adjara {
+            width: 400px;
+            height: 290px;
+          }
+        }
+
+        .the_nature_of_adjara-bottom_blocks {
+          .img_waterfall {
+            width: 395px;
+            height: 245px;
+            top: 30px;
+          }
+          .text-the_nature_of_adjara-bottom_blocks {
+            width: 280px;
+            height: 105px;
+            font-size: 15px;
+            left: 0px;
+            top: 15px;
+          }
+        }
+      }
+    }
+
+    @media all and (max-width: 470px) {
+      .wrapper-the_nature_of_adjara {
+        height: 920px;
+        background-position: -5px 20px;
+
+        .the_nature_of_adjara-top_blocks {
+          padding: 0px;
+          .text-the_nature_of_adjara-top_blocks {
+            width: 290px;
+            h4 {
+              font-size: 18px;
+            }
+          }
+
+          .img-the_nature_of_adjara {
+            width: 300px;
+            height: 210px;
+          }
+        }
+
+        .the_nature_of_adjara-bottom_blocks {
+          .img_waterfall {
+            width: 300px;
+            height: 210px;
+            top: 50px;
+          }
+          .text-the_nature_of_adjara-bottom_blocks {
+            width: 250px;
+            height: 115px;
+            top: 25px;
+          }
+        }
+      }
+    }
+
+    #map_block {
+      box-sizing: border-box;
+      width: 100%;
+      margin: 0 auto 90px;
+      text-align: center;
+
+      h4 {
+        font-size: 25px;
+        margin: 20px 30px;
+      }
+
+      .map {
+        width: 80%;
+        height: 450px;
+        margin: 0 30px;
+      }
+    }
+
+    //breakpoints map
+    @media all and (max-width: 700px) {
+      #map_block {
+        h4 {
+          font-size: 20px;
+        }
+        .map {
+          height: 360px;
+        }
+      }
+    }
+
+    @media all and (max-width: 450px) {
+      #map_block {
+        h4 {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .scroll_up {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    color: rgba(125, 128, 125, 0.555);
+    cursor: pointer;
+    visibility: hidden;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 4px rgba(125, 128, 125, 0.555);
+    opacity: 0;
+    transition: 0.2s;
+    transform: translateY(25px);
+
+    &::before {
+      content: "↑";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+      font-size: 28px;
+      font-weight: 900;
+    }
+
+    &:hover {
+      color: rgb(49, 175, 197);
+    }
+
+    .scroll_up-svg {
+      .scroll_up-svg_path {
+        box-sizing: border-box;
+        fill: none;
+        stroke: rgb(49, 175, 197);
+        stroke-width: 4px;
+        transition: 0.2s;
+      }
+    }
+  }
+
+  .scroll-up--active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .footer {
+    background-color: rgba(120, 122, 122, 0.329);
+    padding: 50px 20px 70px 20px;
+
+    h4 {
+      width: 70%;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    .decor_line-footer {
+      max-width: 70%;
+      border-top: 1px solid rgb(0, 0, 0);
+      margin: 40px auto 20px;
+    }
+
+    .contacts {
+      max-width: 340px;
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      margin: 50px auto 0;
+
+      .social_media {
+        display: block;
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  //breakpoints footer
+  @media all and (max-width: 900px) {
+    .footer {
+      h4 {
+        font-size: 20px;
+      }
+    }
+    @media all and (max-width: 650px) {
+      .footer {
+        h4 {
+          font-size: 18px;
+        }
+      }
+    }
+    @media all and (max-width: 450px) {
+      .footer {
+        h4 {
+          font-size: 16px;
         }
 
         .contacts {
-            width: 340px;
-            display: flex;
-            justify-content: space-evenly;
-            flex-wrap: wrap;
-            margin: 50px auto 0;
-
-            .social_media {
-                display: block;
-                width: 40px;
-                height: 40px;
-                margin: 0 10px 0 0;
-            }
+          .social_media {
+            width: 35px;
+            height: 35px;
+          }
         }
+      }
     }
+  }
 }
